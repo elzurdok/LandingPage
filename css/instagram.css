@@ -1,0 +1,35 @@
+.instagram{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:4px;
+	right:40px;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+     z-index:100;
+}
+
+.instagram:hover {
+	text-decoration: none;
+	color: #d72247;
+    background-color:#fff;
+}
+
+.my-float{
+	margin-top:16px;
+    
+}
+
+#boton2 {   
+
+    
+
+}
