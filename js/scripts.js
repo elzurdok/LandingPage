@@ -53,15 +53,33 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-document.addEventListener('DOMContentLoaded', ()=> {
-    const elementosCarousel = document.querySelectorAll('.carousel');
-    M.Carousel.init(elementosCarousel, {
-        duration: 150,
-        dist: -80,
-        shift: 5,
-        padding: 5,
-        numVisible: 3,
-        indicators: true,
-        noWrap: false
+document.addEventListener('DOMContentLoaded', function () {
+    const formulario = document.getElementById('formulario');
+
+    formulario.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const nombre = formulario.elements.nombre.value;
+        const email = formulario.elements.email.value;
+        const telefono = formulario.elements.telefono.value;
+        const mensaje = formulario.elements.mensaje.value;
+
+        // Aquí puedes agregar la lógica para enviar el mensaje a tu dirección de correo electrónico
+        // Puedes utilizar servicios de correo electrónico como Email.js o configurar un servidor Node.js para enviar el correo.
+        // A continuación, se muestra un ejemplo simple usando Email.js:
+
+        emailjs.send("default_service", "template_id", {
+            from_name: nombre,
+            from_email: email,
+            from_telefono: telefono,
+            message: mensaje,
+        })
+        .then(function(response) {
+            alert("Mensaje enviado con éxito");
+            formulario.reset();
+        }, function(error) {
+            alert("Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.");
+        });
     });
 });
+
